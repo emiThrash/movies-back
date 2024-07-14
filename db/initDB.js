@@ -44,7 +44,7 @@ const usersFilePath = path.join(jsonFilesPath, "users.json");
 
 
 connection.query(
-  fs.readFileSync(path.join(__dirname, "movies.sql"), "utf8"),
+  fs.readFileSync(path.join(__dirname, "moviesdb.sql"), "utf8"),
   (err) => {
     if (err) {
       console.error("Error creating tables:", err);

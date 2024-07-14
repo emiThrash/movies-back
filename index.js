@@ -1,4 +1,3 @@
-
 const express = require("express");
 require("dotenv").config();
 const { logger } = require("./middlewares/loginMidd");
@@ -14,7 +13,7 @@ app.use(express.json());
 
 const PORT = process.env.SERVER_PORT || 3000;
 
-app.all("*", (req, res) => {
+/*app.all("*", (req, res) => {
     res.status(404);
   
     if (req.accepts("html")) {
@@ -24,7 +23,7 @@ app.all("*", (req, res) => {
     } else {
       res.type("txt").send("404 not found");
     }
-  });
+  });*/
 
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/movies", require("./routes/movies.router")); 
