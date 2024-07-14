@@ -1,13 +1,19 @@
-const express = require('express')
-const authController = require('../controllers/auth.controller')
-const authMiddleware = require('../middlewares/auth.middleware')
-const router = express.Router()
+const express = require('express');
+const authController = require('../controllers/authController');
+const authMiddleware = require('../middlewares/auth.middleware');
 
-router.post('/register',authController.register)
-router.post('/login',authController.login)
-// router.get('/protected',authMiddleware,(req,res)=>{
-//     res.status(200).send(`Bienvenido ${req.user}`)
-// })
-router.get('/perfil',authMiddleware,authController.perfil)
+const router = express.Router();
 
-module.exports = router
+router
+  .route('/register')
+  .post(authController.register);
+
+router
+  .route('/login')
+  .post(authController.login);
+
+router
+  .route('/perfil')
+  .get(authMiddleware, authController.perfil);
+
+module.exports = router;

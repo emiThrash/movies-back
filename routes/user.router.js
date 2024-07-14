@@ -1,11 +1,18 @@
-const express = require('express');
-const router = express.Router();
-const userController = require('../controllers/user.controller');
+const express = require("express");
+const usersController = require("../controllers/usersController");
+const idHandler = require("../middlewares/idHandler");
 
-router.get('/', userController.getAllUsers);
-router.get('/:UserID', userController.getUserById);
-router.post('/', userController.createUser);
-router.put('/:UserID', userController.updateUser);
-router.delete('/:UserID', userController.deleteUser);
+const router = express.Router();
+
+router
+  .route("/")
+  .get(usersController.getUsers)
+  .post(usersController.createUser);
+
+router
+  .route("/:id")
+  .get(idHandler, usersController.getUser)
+  .delete(idHandler, usersController.deleteUser)
+  .put(idHandler, usersController.updateUser);
 
 module.exports = router;

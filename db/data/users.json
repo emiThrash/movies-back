@@ -1,0 +1,32 @@
+[
+  {
+    "UserID": 1,
+    "Name": "Emily",
+    "Surname": "Brown",
+    "Email": "emilybrown@example.com",
+    "Password": "hashed_password_abc",
+    "Birthday": "1995-03-28",
+    "ProfilePicture": "https://example.com/profile4.jpg",
+    "Countries_CountryID": 7
+  },
+  {
+    "UserID": 2,
+    "Name": "David",
+    "Surname": "Wilson",
+    "Email": "davidwilson@example.com",
+    "Password": "hashed_password_xyz",
+    "Birthday": "1983-09-18",
+    "ProfilePicture": "https://example.com/profile5.jpg",
+    "Countries_CountryID": 7
+  },  
+  {
+    "UserID": 3,
+    "Name": "El POst",
+    "Surname": "okok",
+    "Email": "elmai@mail.com",
+    "Password": "$2b$10$5el69FW7.Ogeog/N/lA0Tu2sH0LxFvgqQ4F9H8/41JvkuKFmS3raW",
+    "Birthday": "1982-05-12",
+    "ProfilePicture": "1720137044914-imagenPerfil.jpg",
+    "Countries_CountryID": "1"
+  } 
+]
